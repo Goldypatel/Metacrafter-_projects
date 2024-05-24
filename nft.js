@@ -17,32 +17,32 @@ Assessment Requirements
 const nft_V = [];
 
 function mintNFT (name, age, work , exp ) {
-    const nft = {                                    //variable
+    const nft = {                                   
         "o_name" : name,
         "o_age" : age,
         "o_work" : work,
         "o_exp" : exp
 }
 nft_V.push(nft);
-console.log("\nNFT added to array.\n");
 }
+console.log("\Nft added to array");
 
-
-// create a "loop" that will go through an "array" of NFT's
-// and print their metadata with console.log()
 function listNFTs () {
     for (let i = 0; i < nft_V.length; i++) {
         console.log(nft_V[i]);
+        
     }   
 }
 
-// print the total number of NFTs we have minted to the console
 function getTotalSupply() {
     console.log("\nTotal NFTs are : " + nft_V.length);
 }
 
-// call your functions below this line
+// callign statements
 mintNFT("goldy" , "19", "student", "0" );
+mintNFT("xxxxx" , "25", "engineer", "5" );
+mintNFT("yyyyy" , "50", "docter", "6" );
+mintNFT("zzzzz" , "21", "student", "0" );
 listNFTs();
 getTotalSupply();
 
