@@ -1,5 +1,5 @@
 # Metacrafter-_projects
-Practive token
+Practice token
 Simple overview of use/purpose.
 
 #Description
