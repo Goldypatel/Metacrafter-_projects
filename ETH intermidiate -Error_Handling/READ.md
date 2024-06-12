@@ -9,13 +9,13 @@ This project contains a Solidity contract that demonstrates how to use various e
 
 **Error Handling Mechanisms**<br/>
 -> Require<br/>
-The require function is used to validate inputs and conditions before execution. It reverts the transaction if the condition is not met and refunds the remaining gas.
+The require function is used to validate inputs and conditions before execution. It reverts the transaction if the condition is not met and refunds the remaining gas.<br/>
 -> Revert<br/>
 The revert function is used for complex condition checks. It explicitly reverts the transaction and can include an error message.<br/>
 -> Assert<br/>
 The assert function is used to check for internal errors and invariants. It should only be used for conditions that should never be false. If the condition is false, it consumes all remaining gas and reverts the transaction.
 
-**Executing program **<br/>
+**Executing program**<br/>
 1 ) Compile the code using solidity compiler present on he left side of remix (default) <br/>
 2 ) Then Run and Deply transactions (just below compiler )<br/>
 
