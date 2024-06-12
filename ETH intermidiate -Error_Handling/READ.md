@@ -1,6 +1,6 @@
 
 
-**Description** < br / >
+**Description** <br/>
 This project demonstrates basic error handling mechanisms in Solidity smart contracts, including the use of require, revert, assert, and custom errors. These mechanisms help ensure contract security and reliability by enforcing conditions and handling unexpected scenarios.
 
 **Getting Started **
