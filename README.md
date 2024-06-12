@@ -1,12 +1,12 @@
 # Metacrafter-_projects
-Practice token
-Simple overview of use/purpose.
+Here This repo has various projects that i m making during my web3, solidity learning journey thorough metacrafters
 
 #Description
-It is a simple program that mimics creation of a token consequently teaching about basics of solidity like variable, function , contracts, conditional statements etc.
+It is a simple programs to through which you can learn js, solidity, etherum and much more about web3 and blockchain
 
 #Getting Started
-The code runs of remix, Ethereum IDE
+The code runs of remix, Ethereum IDE or on VS code
+- > Make sure to read individual readme files for each project when you go through them 
 - > Make sure to mention the license
 - > The correct or existing version of solidity
   
