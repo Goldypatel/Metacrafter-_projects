@@ -7,11 +7,11 @@ This project demonstrates basic Creation of a crypto token through ERC20 using o
 
 **Basic usage of functions created**<br/>
 >Mint<br/>
-Increases the total supply by creating new tokens and assigning them to a specified account. This can be implemented with a mint function that increments both the total supply and the recipient's balance.<br/>
+>>Increases the total supply by creating new tokens and assigning them to a specified account. This can be implemented with a mint function that increments both the total supply and the recipient's balance.<br/>
 >Burn<br/>
-Reduces the total supply by permanently destroying a specified amount of tokens from a holder's balance. This can be implemented with a burn function that decrements both the total supply and the sender's balance.<br/>
+>>Reduces the total supply by permanently destroying a specified amount of tokens from a holder's balance. This can be implemented with a burn function that decrements both the total supply and the sender's balance.<br/>
 >Transfer<br/>
-Moves tokens from one account to another. The transfer function ensures tokens are deducted from the sender's balance and added to the recipient's balance, maintaining total supply.
+>>Moves tokens from one account to another. The transfer function ensures tokens are deducted from the sender's balance and added to the recipient's balance, maintaining total supply.
 ---
 **Executing program**<br/>
 1 ) Compile the code using solidity compiler present on he left side of remix (default) <br/>
