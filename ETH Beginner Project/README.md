@@ -40,7 +40,7 @@ Mints new tokens and assigns them to a specified address. Only the owner can cal
 **Example Usage:**
 ```solidity
 mintT(0xYourAddress, 1000);
-
+```
 ## Getting Started
 The code runs of remix, Ethereum IDE
 - > Make sure to mention the license
