@@ -37,10 +37,19 @@ Mints new tokens and assigns them to a specified address. Only the owner can cal
 - Increases the `totalSupply` by `value`.
 - Increases the balance of `Addr` by `value`.
 
-**Example Usage:**
-```solidity
-mintT(0xYourAddress, 1000);
-```
+### BurnT
+
+Burns tokens from assigned address and updates the value in the vbalances. Only the owner can call this function.
+
+**Parameters:**
+- `address Addr` - The address from which the tokens will be burned
+- `uint value` - The number of tokens to burn.
+
+**Function Logic:**
+- Verifies that the caller is the owner.
+- decreases the `totalSupply` by `value`.
+- decreases the balance of `Addr` by `value`.
+
 ## Getting Started
 The code runs of remix, Ethereum IDE
 - > Make sure to mention the license
