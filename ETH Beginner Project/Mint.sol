@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.18;
+pragma solidity ^0.8.18;
 
 /*
        REQUIREMENTS
@@ -19,26 +19,29 @@ contract MyToken {
 
     // public variables here
 
-    string public tokenName = "zyphrus" ;
-    string public tokenAbbrv = "zyph" ;
+    string public tokenName = "TreeStat" ;
+    string public tokenAbbrv = "TS" ;
     uint public totalSupply = 0 ;
-
+    address owner ;
 
     // mapping variable here
 
-    mapping (address => uint) public balances ;
+    mapping (address => uint) public balances ;  
 
     // mint function
-    function mint(address Addr , uint value) public{
-        totalSupply += value ;
-        balances[Addr] += value ;
+    function mintT(address Addr , uint value) public{
+        require(msg.sender == owner, "you are not the owner");
+        totalSupply += value ; //same as totalsupply = totalsupply + value
+        balances[Addr] += value ; 
     }
     // burn function
-     function burn(address Addr , uint value) public{
+     function burnT(address Addr , uint value) public{
+      require(msg.sender == owner, "you are not the owner");
         if (balances[Addr] >= value){
         totalSupply -= value ;
         balances[Addr] -= value ;
         }
+        return ;
     }
 
 }
