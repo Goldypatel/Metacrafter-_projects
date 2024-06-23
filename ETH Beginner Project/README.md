@@ -59,7 +59,7 @@ The code runs of remix, Ethereum IDE
 1 )  Compile the code using solidity compiler present on he left side of remix (default)
 2 )  Then Run and Deply transactions (just below compiler )
 
-#Contact
+## Contact
 goldy39.gp@gmail.com
 
 License
