@@ -1,25 +1,83 @@
+# BankSys Smart Contract
 
+## Overview
 
-## Description
-This project demonstrates basic error handling mechanisms in Solidity smart contracts, including the use of require, revert, assert, and custom errors. These mechanisms help ensure contract security and reliability by enforcing conditions and handling unexpected scenarios.
+This Solidity smart contract implements a simple banking system where the contract owner can deposit and withdraw funds. The contract maintains a balance mapping for each user, but only the owner can actually perform deposit and withdrawal operations.
 
-## Getting Started
-**Introduction**<br/>
-This project contains a Solidity contract that demonstrates how to use various error handling mechanisms to validate inputs, check conditions, and handle unexpected situations. Understanding and implementing proper error handling is crucial for developing secure and robust smart contracts.
+## Features
 
-**Error Handling Mechanisms**<br/>
--> Require<br/>
-The require function is used to validate inputs and conditions before execution. It reverts the transaction if the condition is not met and refunds the remaining gas.<br/>
--> Revert<br/>
-The revert function is used for complex condition checks. It explicitly reverts the transaction and can include an error message.<br/>
--> Assert<br/>
-The assert function is used to check for internal errors and invariants. It should only be used for conditions that should never be false. If the condition is false, it consumes all remaining gas and reverts the transaction.
+- **Deposit**: Allows the owner to deposit a specified amount of value to their account.
+- **Withdraw**: Allows the owner to withdraw a specified amount of value from their account, ensuring the balance is sufficient.
+- **Check Balance**: Any user can check their balance in the contract.
 
-**Executing program**<br/>
-1 ) Compile the code using solidity compiler present on he left side of remix (default) <br/>
-2 ) Then Run and Deply transactions (just below compiler )<br/>
+## Contract Details
 
-#Contact goldy39.gp@gmail.com<br/>
+### State Variables
 
-License This project is licensed under the Goldy Patel License
+- `owner`: The address of the contract owner, set during the contract deployment.
+- `balances`: A mapping that holds the balance for each address.
 
+### Constructor
+
+```solidity
+constructor(){
+    owner = msg.sender;
+}
+```
+Sets the `owner` to the address that deploys the contract.
+
+### Functions
+
+#### `deposit`
+
+```solidity
+function deposit(uint256 value) public
+```
+
+Allows the owner to deposit a certain amount to their balance.
+
+- **Parameters**: `value` - The amount to be deposited.
+- **Requirements**:
+  - The caller must be the owner.
+- **Assertions**:
+  - Ensures the balance is updated correctly.
+
+#### `withdraw`
+
+```solidity
+function withdraw(uint amount) public
+```
+
+Allows the owner to withdraw a specified amount from their balance.
+
+- **Parameters**: `amount` - The amount to be withdrawn.
+- **Requirements**:
+  - The caller must be the owner.
+  - The amount to be withdrawn must not exceed the current balance.
+- **Assertions**:
+  - Ensures the balance does not go negative.
+
+#### `checkbalance`
+
+```solidity
+function checkbalance() public view returns (uint)
+```
+
+Returns the balance of the caller.
+
+- **Returns**: The balance of the caller.
+
+## Example Usage
+
+### Deploying the Contract
+
+Deploy the contract using a Solidity-compatible environment like Remix or Hardhat. The deploying address will become the `owner`.
+
+## Notes
+
+- Only the owner can deposit and withdraw funds.
+- The contract uses `require` statements to enforce rules and `assert` statements to check internal consistency.
+
+## License
+
+This project is licensed under the MIT License.
