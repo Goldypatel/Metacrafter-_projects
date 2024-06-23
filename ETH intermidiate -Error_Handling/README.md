@@ -2,7 +2,7 @@
 
 ## Overview
 
-This Solidity smart contract implements a simple banking system where the contract owner can deposit and withdraw funds. The contract maintains a balance mapping for each user, but only the owner can actually perform deposit and withdrawal operations.
+This Solidity smart contract implements a simple banking system where the contract owner can deposit and withdraw funds. The contract maintains a balance mapping for each user, but only the owner can actually perform deposit and withdrawal operations. This shows the usage of REQUIRE , ASSERT AND REVERT functions in solidity
 
 ## Features
 
