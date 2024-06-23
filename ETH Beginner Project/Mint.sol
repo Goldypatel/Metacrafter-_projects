@@ -28,6 +28,10 @@ contract MyToken {
 
     mapping (address => uint) public balances ;  
 
+   constructor(){
+        owner = msg.sender ;
+      } 
+
     // mint function
     function mintT(address Addr , uint value) public{
         require(msg.sender == owner, "you are not the owner");
